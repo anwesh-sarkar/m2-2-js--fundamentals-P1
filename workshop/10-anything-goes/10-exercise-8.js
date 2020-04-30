@@ -14,17 +14,22 @@
 // filter([1, 2, 3, 4, 5], isEven) returns [2,4];
 
 function filter(lst, func) {
-  // lst is an array and f is a function
-  // func takes one argument and returns a boolean (true or false)
+  let arr = [];
+  for (let pos = 0; pos < lst.length; pos++) {
+    if (func(lst[pos])) {
+      arr.push(lst[pos]);
+    }
+  }
+  return arr;
 }
 // -------------------------------------------------------------------------
 function keepLong(str) {
   return str.length > 5;
 }
 console.log(
-  'Q8: ',
+  "Q8: ",
   filter(
-    ['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'],
+    ["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"],
     keepLong
   )
 );

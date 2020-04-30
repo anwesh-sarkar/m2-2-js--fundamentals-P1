@@ -12,14 +12,16 @@
 // map(["bob", "susie"], toUpperCase) returns ["BOB", "SUSIE"]
 
 function map(lst, func) {
-  // lst is an array and func is a function
+  for (let pos = 0; pos < lst.length; pos++) {
+    console.log(func(lst[pos]));
+  }
 }
 // -------------------------------------------------------------------------
 function charCount(str) {
   return str.length;
 }
 console.log(
-  'Q7: ',
-  map(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'], charCount)
+  "Q7: ",
+  map(["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"], charCount)
 );
-console.log('Q7: ', map(['Scott', 'Bob', 'Ric', 'Jim'], charCount));
+console.log("Q7: ", map(["Scott", "Bob", "Ric", "Jim"], charCount));

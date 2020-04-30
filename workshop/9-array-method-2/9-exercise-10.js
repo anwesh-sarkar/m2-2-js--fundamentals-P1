@@ -9,11 +9,27 @@
 // <100 is A
 
 // Write function here
+function calculateAverage(grades) {
+  let avg = Math.round(
+    grades.reduce(function (sum, grades) {
+      return sum + grades;
+    }) / grades.length
+  );
+  if (avg > 90 && avg <= 100) {
+    return "A";
+  } else if (avg > 80 && avg <= 90) {
+    return "B";
+  } else if (avg > 70 && avg <= 80) {
+    return "C";
+  } else if (avg > 60 && avg <= 70) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
 
+console.log(calculateAverage([48, 95, 65, 48, 59, 78, 72, 65]));
 
- 
 // Call the function with [48, 95, 65, 48, 59, 78, 72, 65]
 
 // Try with other values as well
-
-

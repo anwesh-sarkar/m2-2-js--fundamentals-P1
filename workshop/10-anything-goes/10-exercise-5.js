@@ -13,6 +13,18 @@
 
 let armstrongNumbers = [];
 
-// write your loop here...
+for (let i = 0; i < 1000; i++) {
+  let digits = i.toString().split("");
+
+  let sum = 0;
+  digits.forEach(function (digit) {
+    let digitPow = digit ** digits.length;
+    sum = sum + digitPow;
+  });
+
+  if (sum === i) {
+    armstrongNumbers.push(i);
+  }
+}
 
 console.log(armstrongNumbers);
